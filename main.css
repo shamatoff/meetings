@@ -1,0 +1,41 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+#main-container {
+    display: flex;
+    /*justify-content: center;*/
+}
+
+#main-container .appointments {
+    /*order: 1;*/
+    flex-basis: 50%;
+}
+
+#main-container .appointments .section-wrapper {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 80%;
+    margin: 0 auto;
+}
+
+#main-container .appointments section {
+    border: 1px solid red;
+    padding: 10px;
+}
+
+#main-container .appointments section article {
+    border: 1px solid red;
+}
+
+#main-container .appointments section article .a-actions {
+    display: flex;
+    justify-content: flex-end;
+}
+
+#main-container .tasks {
+    /*order: 2;*/
+    flex-basis: 50%;
+}
