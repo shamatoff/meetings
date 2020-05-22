@@ -6,11 +6,11 @@ const appointments = [
     { id: 3, selected: false, duration: '11:30 - 12:30', title: 'Lunch', attendees: 'Cookie Monster' },
     { id: 4, selected: false, duration: '12:30 - 13:30', title: 'Daily Meeting', attendees: 'The Boss' },
     { id: 5, selected: false, duration: '13:30 - 14:00', title: 'Product Demo', attendees: 'Jane Doe' },
-    // { id: 6, selected: false, duration: '14:00 - 14:30', title: 'Networking II', attendees: 'Dalai Lama' },
-    // { id: 7, selected: false, duration: '14:30 - 15:30', title: 'Stretching', attendees: 'Mike Tyson' },
-    // { id: 8, selected: false, duration: '15:30 - 16:00', title: 'Dancing', attendees: 'Dua Lipa' },
-    // { id: 9, selected: false, duration: '16:00 - 17:30', title: 'COVID-19 Discussion', attendees: 'Bill Gates' },
-    // { id: 10, selected: false, duration: '17:30 - 18:00', title: 'Meditation', attendees: 'Melinda Gates' }
+    { id: 6, selected: false, duration: '14:00 - 14:30', title: 'Networking II', attendees: 'Dalai Lama' },
+    { id: 7, selected: false, duration: '14:30 - 15:30', title: 'Stretching', attendees: 'Mike Tyson' },
+    { id: 8, selected: false, duration: '15:30 - 16:00', title: 'Dancing', attendees: 'Dua Lipa' },
+    { id: 9, selected: false, duration: '16:00 - 17:30', title: 'COVID-19 Discussion', attendees: 'Bill Gates' },
+    { id: 10, selected: false, duration: '17:30 - 18:00', title: 'Meditation', attendees: 'Melinda Gates' }
 ];
 
 const actionButtons = [
@@ -19,10 +19,10 @@ const actionButtons = [
     { id: 3, icon: 'fa-desktop', label: 'Present' },
     { id: 4, icon: 'fa-user-plus', label: 'Invite in room' },
     { id: 5, icon: 'fa-share', label: 'Share appointment' },
-    // { id: 6, icon: 'fa-podcast', label: 'Start podcast' },
-    // { id: 7, icon: 'fa-map', label: 'Share location' },
-    // { id: 8, icon: 'fa-virus', label: '#StayAtHome' },
-    // { id: 9, icon: 'fa-hand-point-right', label: 'Poke' }
+    { id: 6, icon: 'fa-podcast', label: 'Start podcast' },
+    { id: 7, icon: 'fa-map', label: 'Share location' },
+    { id: 8, icon: 'fa-virus', label: '#StayAtHome' },
+    { id: 9, icon: 'fa-hand-point-right', label: 'Poke' }
 ]
 
 function renderAppointments(templateId) {
