@@ -1,41 +1,190 @@
 * {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: url("resources/bg.svg");
+  color: white;
+  overflow: hidden;
 }
 
 #main-container {
-    display: flex;
-    /*justify-content: center;*/
+  display: flex;
+  height: 100%;
+  padding: 70px 0;
+  box-sizing: border-box;
 }
-
+#main-container .user-msg {
+  text-align: center;
+}
 #main-container .appointments {
-    /*order: 1;*/
-    flex-basis: 50%;
+  flex-basis: 50%;
+  height: 100%;
 }
-
 #main-container .appointments .section-wrapper {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    width: 80%;
-    margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  margin: 0 auto;
 }
-
-#main-container .appointments section {
-    border: 1px solid red;
-    padding: 10px;
+#main-container .appointments .section-wrapper#appointments-inner {
+  overflow-y: auto;
+  height: 85vh;
 }
-
-#main-container .appointments section article {
-    border: 1px solid red;
+#main-container .appointments .section-wrapper section {
+  padding: 30px;
+  background-color: #313131;
+  margin: 5px 0;
+  height: 200px;
 }
-
-#main-container .appointments section article .a-actions {
-    display: flex;
-    justify-content: flex-end;
+#main-container .appointments .section-wrapper section button {
+  background-color: #313131;
 }
-
+#main-container .appointments .section-wrapper section.active {
+  background-color: #4285f4;
+}
+#main-container .appointments .section-wrapper section.active button {
+  background-color: #4285f4;
+}
+#main-container .appointments .section-wrapper section article {
+  color: white;
+}
+#main-container .appointments .section-wrapper section article .a-content .info {
+  padding: 10px 0;
+}
+#main-container .appointments .section-wrapper section article .a-content .info.a-title {
+  font-size: x-large;
+}
+#main-container .appointments .section-wrapper section article .a-actions {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  padding-top: 40px;
+}
+#main-container .appointments .section-wrapper section article .a-actions button {
+  background-position: center;
+  transition: background 0.8s;
+  border: 2px solid white;
+  border-radius: 1px;
+  padding: 12px 58px;
+  font-size: 16px;
+  text-transform: uppercase;
+  cursor: pointer;
+  color: white;
+  box-shadow: 0 0 4px #999;
+  outline: none;
+  align-self: flex-end;
+}
+#main-container .appointments .section-wrapper section article .a-actions button:hover {
+  background: #47a7f5 radial-gradient(circle, transparent 1%, #47a7f5 1%) center/15000%;
+}
+#main-container .appointments .section-wrapper section article .a-actions button:active {
+  background-color: #6eb9f7;
+  background-size: 100%;
+  transition: background 0s;
+}
 #main-container .tasks {
-    /*order: 2;*/
-    flex-basis: 50%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-basis: 50%;
+  justify-content: flex-end;
+  overflow: hidden;
 }
+#main-container .tasks .section-wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  margin: 0 auto;
+}
+#main-container .tasks .section-wrapper .action-section-wrapper {
+  height: 43vh;
+  overflow-y: auto;
+}
+#main-container .tasks .header {
+  padding-bottom: 120px;
+}
+#main-container .tasks .header div {
+  text-align: right;
+}
+#main-container .tasks .header div.time {
+  font-size: 58px;
+}
+#main-container .tasks .header div.time-zone, #main-container .tasks .header div .date {
+  font-size: 13px;
+}
+#main-container .tasks .actions {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-evenly;
+  box-sizing: border-box;
+}
+#main-container .tasks .actions::after {
+  content: "";
+  flex-basis: 40%;
+}
+#main-container .tasks .actions .action-btn {
+  flex-basis: 40%;
+  justify-content: center;
+  padding: 20px 0;
+  text-align: center;
+  align-items: center;
+}
+#main-container .tasks .actions .action-btn .inner-btn-content {
+  border: 1px solid white;
+  width: 100px;
+  height: 100px;
+  line-height: 91px;
+  border-radius: 50%;
+  margin: 0 auto;
+  font-size: 40px;
+  cursor: pointer;
+  transition: 0.8s;
+}
+#main-container .tasks .actions .action-btn .inner-btn-content span.action-icon {
+  display: inline-block;
+  vertical-align: middle;
+  line-height: normal;
+}
+#main-container .tasks .actions .action-btn .action-label {
+  margin-top: 10px;
+}
+#main-container .tasks .footer {
+  padding-top: 120px;
+  text-align: right;
+  line-height: 30px;
+}
+#main-container .tasks .footer div {
+  font-size: 20px;
+  vertical-align: middle;
+  cursor: pointer;
+}
+#main-container .tasks .footer .slider {
+  margin: 0 10px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background: #d3d3d3;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: 0.2s;
+  transition: opacity 0.2s;
+  height: 5px;
+  vertical-align: middle;
+  font-size: 14px;
+}
+#main-container .tasks .footer .slider:hover {
+  opacity: 1;
+}
+#main-container .tasks .footer .slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  background: #F2F2F2;
+  cursor: pointer;
+}
+#main-container .tasks .footer .slider::-moz-range-thumb {
+  background: #F2F2F2;
+  cursor: pointer;
+}
+
+/*# sourceMappingURL=main.css.map */

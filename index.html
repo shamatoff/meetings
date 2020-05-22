@@ -10,68 +10,51 @@
 <body>
     <div id="main-container" class="container column-layout">
         <div class="appointments">
-            <div class="section-wrapper">
-                <section class="appointment active">
-                    <article>
-                        <div class="a-duration">Duration</div>
-                        <strong class="a-title">Title</strong>
-                        <div class="a-attendees">Attendees</div>
-                        <div class="a-actions">
-                            <button>Join</button>
-                        </div>
-                    </article>
-                </section>
-                <section class="appointment">
-                    <article>
-                        <div class="a-duration">Duration</div>
-                        <strong class="a-title">Title</strong>
-                        <div class="a-attendees">Attendees</div>
-                        <div class="a-actions">
-                            <button>Join</button>
-                        </div>
-                    </article>
-                </section>
-                <section class="appointment">
-                    <article>
-                        <div class="a-duration">Duration</div>
-                        <strong class="a-title">Title</strong>
-                        <div class="a-attendees">Attendees</div>
-                        <div class="a-actions">
-                            <button>Join</button>
-                        </div>
-                    </article>
-                </section>
+            <div id="appointments-inner" class="section-wrapper">
+                <template id="appointment-tmpl">
+                    <section class="appointment active">
+                        <article>
+                            <div class="a-content">
+                                <div class="info a-duration">Duration</div>
+                                <strong class="info a-title">Title</strong>
+                                <div class="info a-attendees">Attendees</div>
+                            </div>
+                            <div class="a-actions">
+                                <button>Join</button>
+                            </div>
+                        </article>
+                    </section>
+                </template>
             </div>
         </div>
         <div class="tasks">
-            <div class="header">
-                <div class="time">12:05 PM</div>
-                <div class="time-zone">Eastern European Time</div>
-                <div class="date">21 / 05 / 2020</div>
-            </div>
-            <div class="actions">
-                <div class="action-btn">
-                    <span class="fas fa-users"></span>
-                    <div>New Meeting</div>
+            <div id="tasks-inner" class="section-wrapper">
+                <div class="header">
+                    <div class="time">12:05 PM</div>
+                    <div class="time-zone">Eastern European Time</div>
+                    <div class="date">21 / 05 / 2020</div>
                 </div>
-                <div class="action-btn">
-                    <span class="fas fa-phone"></span>
-                    <div>Dial pad</div>
+                <div class="action-section-wrapper">
+                    <div id="action-container" class="actions">
+                        <template id="action-btn-tmpl">
+                            <div class="action-btn">
+                                <div class="inner-btn-content">
+                                    <span class="action-icon fas"></span>
+                                </div>
+                                <div class="action-label"></div>
+                            </div>
+                        </template>
+                    </div>
                 </div>
-                <div class="action-btn">
-                    <span class="fas fa-desktop"></span>
-                    <div>Present</div>
+                <div class="footer">
+                    <div class="fas fa-volume-up"></div>
+                    <input class="slider" id="myRange" type="range" min="0" max="20" step="0.1">
+                    <div class="fas fa-cog settings"></div>
                 </div>
-                <div class="action-btn">
-                    <span class="fas fa-user-plus"></span>
-                    <div>Invite in room</div>
-                </div>
-            </div>
-            <div class="footer">
-                <input type="range" min="0" max="20" step="0.1" onchange="console.log(this.value)">
-                <span class="settings"></span>
             </div>
         </div>
     </div>
+
+    <script src="main.js"></script>
 </body>
 </html>
